@@ -1,0 +1,26 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "an app to help keep track of how much time you spent on a task",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Melvin-Cordon/TaskTracker.git"
+  },
+  "keywords": [
+    "Task",
+    "Track",
+    "node",
+    "time",
+    "managment"
+  ],
+  "author": "Melvin Cordon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Melvin-Cordon/TaskTracker/issues"
+  },
+  "homepage": "https://github.com/Melvin-Cordon/TaskTracker#readme"
+}
