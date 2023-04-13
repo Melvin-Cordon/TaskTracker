@@ -10,7 +10,7 @@ module.exports = {
                 requestHandler.GET_route(request, response);
                 break;
             case 'POST':
-                //Send to POST route tables
+                requestHandler.POST_route(request, response);
                 break;
             default:
                 response.writeHead(404);

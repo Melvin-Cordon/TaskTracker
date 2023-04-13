@@ -9,6 +9,33 @@ const classNames = {
   const text = document.getElementById('textintodo')
   var cards = {}
   
+  async function sendPostRequest(title, descrip) {
+    const url = '/newTodo';
+    const data = {
+      key1: title,
+      key2: descrip
+    };
+  
+    try {
+      const response = await fetch(url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+  
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+  
+      const responseData = await response.json();
+      console.log(responseData);
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  }
+
   function newTodo() {
   
     const title = document.querySelector('#todoTitle').value
@@ -20,7 +47,9 @@ const classNames = {
        return 1
     }
   
+    sendPostRequest();
     const blank = document.createElement("br")
+    sendPostRequest(title, descrip);
     todoElement = makeTodo(title, descrip)
     render(todoElement, list)
     render(blank, list)

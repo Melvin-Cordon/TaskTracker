@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/Melvin-Cordon/TaskTracker/issues"
   },
-  "homepage": "https://github.com/Melvin-Cordon/TaskTracker#readme"
+  "homepage": "https://github.com/Melvin-Cordon/TaskTracker#readme",
+  "dependencies": {
+    "sqlite3": "^5.1.6"
+  }
 }
