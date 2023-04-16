@@ -59,8 +59,4 @@ add_task_card: function(title, descrip) {
   
   }
 
-  
-
-
-
 };

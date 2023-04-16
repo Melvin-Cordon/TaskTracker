@@ -41,4 +41,17 @@ module.exports = {
             response.end();
         });
     },
+
+    JSON: function (path, response) {
+        response.writeHead(200, {'Content-Type': 'application/json'});
+        fs.readFile(path, null, function(error, data) {
+            if (error) {
+                response.writeHead(404);
+                response.write('File not found!');
+            } else {
+                response.write(data);
+            }
+            response.end();
+        });
+    },
 };
